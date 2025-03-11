@@ -1,94 +1,70 @@
-#Simple Task Manager
+Simple Task Manager
+A lightweight and responsive task management application built with Vanilla JavaScript, HTML5, and CSS3.
+This project allows users to create, read, update, and delete tasks, as well as move tasks between columns (To Do, In Progress, Done) using drag-and-drop functionality
+Tasks are persisted in the browser's localStorage, ensuring data is saved even after refreshing the page.
 
-The Simple Task Manager is a web-based application designed to help users organize and manage their tasks efficiently.
-It allows users to create, read, update, and delete tasks,
-and provides a visual interface to track tasks across three stages: To Do, In Progress, and Done.
-Built with HTML, CSS, and JavaScript,
-it includes features like drag-and-drop functionality, voice input, dark mode, task prioritization, and due dates. 
-Tasks are saved in localStorage, ensuring they persist even after the page is refreshed or closed.
-The app is responsive, works seamlessly on both desktop and mobile devices, and offers a clean, user-friendly interface.
+Features
+CRUD Operations:
+Create: Add new tasks.
+Read: Display tasks in their respective columns.
+Update: Edit task status by dragging and dropping.
+Delete: Remove tasks (optional enhancement).
 
-Key Features
-1.CRUD Operations: Create, read, update, and delete tasks.
+Drag-and-Drop Functionality:
+Move tasks between To Do, In Progress, and Done columns seamlessly.
 
-2.Drag-and-Drop: Move tasks between columns (To Do, In Progress, Done).
+Responsive Design:
+Works flawlessly on both mobile and desktop devices.
 
-3.Voice Input: Add tasks by speaking into the microphone.
+Local Storage:
+Tasks are saved in the browser's localStorage, ensuring data persistence.
 
-4.Dark Mode: Toggle between light and dark themes.
+Clean UI/UX:
+Smooth animations and transitions for a polished user experience.
 
-5.Task Prioritization: Assign priority levels (Low, Medium, High) and sort tasks.
+Setup and Installation
+Follow these steps to set up the project locally:
 
-6.Due Dates: Set and sort tasks by due dates.
+ open the index.html file in your browser.
 
-7.Local Storage: Save tasks in the browser for persistence.
+Technologies Used
+Frontend:
+HTML5
+CSS3 (Flexbox and Grid for layout)
+Vanilla JavaScript
 
-8.Responsive Design: Optimized for all screen sizes.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Task Manager Task Manager</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <h1> Task Manager</h1>
-    <nav>
-      <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-      <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-      <div id="menu" class="menu">
-        <button id="clear-tasks"><i class="fas fa-trash"></i> Clear All Tasks</button>
-        <button id="sort-by-priority"><i class="fas fa-sort-amount-up"></i> Sort by Priority</button>
-        <button id="sort-by-date"><i class="fas fa-calendar-alt"></i> Sort by Due Date</button>
-      </div>
-    </nav>
-  </header>
+Persistence:
+localStorage for saving tasks.
 
-  <div class="task-manager">
-    <div class="column" id="todo">
-      <h2><i class="fas fa-list"></i> To Do</h2>
-      <div class="tasks" id="todo-tasks"></div>
-      <button id="add-task"><i class="fas fa-plus"></i> Add Task</button>
-    </div>
-    <div class="column" id="in-progress">
-      <h2><i class="fas fa-spinner"></i> In Progress</h2>
-      <div class="tasks" id="in-progress-tasks"></div>
-    </div>
-    <div class="column" id="done">
-      <h2><i class="fas fa-check-circle"></i> Done</h2>
-      <div class="tasks" id="done-tasks"></div>
-    </div>
-  </div>
+How to Use
+Add a Task:
+Type a task in the input field and click Add Task.
+Move Tasks:
+Drag and drop tasks between the To Do, In Progress, and Done columns.
 
-  <!-- Add Task Modal -->
-  <div id="task-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2><i class="fas fa-tasks"></i> Add Task</h2>
-      <input type="text" id="task-title" placeholder="Task Title">
-      <textarea id="task-description" placeholder="Task Description"></textarea>
-      <div class="form-group">
-        <label for="task-priority"><i class="fas fa-exclamation-circle"></i> Priority:</label>
-        <select id="task-priority">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="task-due-date"><i class="fas fa-calendar"></i> Due Date:</label>
-        <input type="date" id="task-due-date">
-      </div>
-      <div class="form-group">
-        <button id="save-task"><i class="fas fa-save"></i> Save Task</button>
-        <button id="voice-input"><i class="fas fa-microphone"></i> Voice Input</button>
-      </div>
-    </div>
-  </div>
+Persistent Data:
+Tasks are automatically saved in localStorage. Refresh the page to see your tasks still there.
 
-  <script src="script.js"></script>
-</body>
-</html>
+Code Structure
+
+index.html:
+Contains the HTML structure for the task manager
+
+styles.css:
+Handles the styling and layout of the application.
+
+script.js:
+Implements the core functionality (CRUD operations, drag-and-drop, and localStorage integration).
+
+Optional Enhancements
+Dark Mode:
+Add a toggle button to switch between light and dark themes.
+
+Priority Tags:
+Add color-coded priority tags (e.g., High, Medium, Low) to tasks.
+
+API Integration:
+Fetch weather data for task due dates using a public API.
+
+Voice Input:
+Allow users to add tasks using voice input.
