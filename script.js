@@ -133,8 +133,7 @@ darkModeToggle.addEventListener('click', () => {
   darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
 });
 
-renderTasks();
-*/
+renderTasks();*/
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 const todoTasks = document.getElementById('todo-tasks');
